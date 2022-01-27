@@ -20,10 +20,7 @@ imap.once('ready', () => {
     })
 
     f.on('message', (msg, seqno) => {
-      // console.log('Message #%d', seqno)
-
       msg.on('body', (stream, info) => {
-        console.log('👀 - info', info)
         let buffer = ''
 
         stream.on('data', (chunk) => {
